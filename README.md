@@ -16,7 +16,7 @@ sample 1.9.1 is build with API Nifi 1.9.1
 
 | version         | version NIFI             |
 | --------------- | -------------------------|
-| version 1.9.1.0 | Build with api nifi  1.9.1 |
+| version 1.9.1 | Build with api nifi  1.9.1 |
 
 ## Getting Started
 
