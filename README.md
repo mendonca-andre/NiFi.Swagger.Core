@@ -444,13 +444,6 @@ Authentication schemes defined for the API:
 - **Type**: OAuth
 - **Flow**: implicit
 
-  ?
-
-
-## Recommendation
-
-It's recommended to create an instance of `ApiClient` per thread in a multithreaded environment to avoid any potential issues.
-
 ## Author
 Andre Mendonca
 	
