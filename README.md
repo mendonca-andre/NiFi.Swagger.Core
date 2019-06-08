@@ -61,174 +61,174 @@ All URIs are relative to *http://localhost/nifi/*
 
 | Class                    | Method                                   | HTTP request                             | Description                              |
 | ------------------------ | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
-| *AccessApi*              | [**createAccessToken**](Docs/AccessApi.md#createAccessToken) | **POST** /access/token                   | Creates a token for accessing the REST API via username/password |
-| *AccessApi*              | [**createAccessTokenFromTicket**](Docs/AccessApi.md#createAccessTokenFromTicket) | **POST** /access/kerberos                | Creates a token for accessing the REST API via Kerberos ticket exchange / SPNEGO negotiation |
-| *AccessApi*              | [**createDownloadToken**](Docs/AccessApi.md#createDownloadToken) | **POST** /access/download-token          | Creates a single use access token for downloading FlowFile content. |
-| *AccessApi*              | [**createUiExtensionToken**](Docs/AccessApi.md#createUiExtensionToken) | **POST** /access/ui-extension-token      | Creates a single use access token for accessing a NiFi UI extension. |
-| *AccessApi*              | [**getAccessStatus**](Docs/AccessApi.md#getAccessStatus) | **GET** /access                          | Gets the status the client&#39;s access  |
-| *AccessApi*              | [**getLoginConfig**](Docs/AccessApi.md#getLoginConfig) | **GET** /access/config                   | Retrieves the access configuration for this NiFi |
-| *ConnectionsApi*         | [**deleteConnection**](Docs/ConnectionsApi.md#deleteConnection) | **DELETE** /connections/{id}             | Deletes a connection                     |
-| *ConnectionsApi*         | [**getConnection**](Docs/ConnectionsApi.md#getConnection) | **GET** /connections/{id}                | Gets a connection                        |
-| *ConnectionsApi*         | [**updateConnection**](Docs/ConnectionsApi.md#updateConnection) | **PUT** /connections/{id}                | Updates a connection                     |
-| *ControllerApi*          | [**createBulletin**](Docs/ControllerApi.md#createBulletin) | **POST** /controller/bulletin            | Creates a new bulletin                   |
-| *ControllerApi*          | [**createControllerService**](Docs/ControllerApi.md#createControllerService) | **POST** /controller/controller-services | Creates a new controller service         |
-| *ControllerApi*          | [**createReportingTask**](Docs/ControllerApi.md#createReportingTask) | **POST** /controller/reporting-tasks     | Creates a new reporting task             |
-| *ControllerApi*          | [**deleteHistory**](Docs/ControllerApi.md#deleteHistory) | **DELETE** /controller/history           | Purges history                           |
-| *ControllerApi*          | [**deleteNode**](Docs/ControllerApi.md#deleteNode) | **DELETE** /controller/cluster/nodes/{id} | Removes a node from the cluster          |
-| *ControllerApi*          | [**getCluster**](Docs/ControllerApi.md#getCluster) | **GET** /controller/cluster              | Gets the contents of the cluster         |
-| *ControllerApi*          | [**getControllerConfig**](Docs/ControllerApi.md#getControllerConfig) | **GET** /controller/config               | Retrieves the configuration for this NiFi Controller |
-| *ControllerApi*          | [**getNode**](Docs/ControllerApi.md#getNode) | **GET** /controller/cluster/nodes/{id}   | Gets a node in the cluster               |
-| *ControllerApi*          | [**updateControllerConfig**](Docs/ControllerApi.md#updateControllerConfig) | **PUT** /controller/config               | Retrieves the configuration for this NiFi |
-| *ControllerApi*          | [**updateNode**](Docs/ControllerApi.md#updateNode) | **PUT** /controller/cluster/nodes/{id}   | Updates a node in the cluster            |
-| *ControllerServicesApi*  | [**clearState**](Docs/ControllerServicesApi.md#clearState) | **POST** /controller-services/{id}/state/clear-requests | Clears the state for a controller service |
-| *ControllerServicesApi*  | [**getControllerService**](Docs/ControllerServicesApi.md#getControllerService) | **GET** /controller-services/{id}        | Gets a controller service                |
-| *ControllerServicesApi*  | [**getControllerServiceReferences**](Docs/ControllerServicesApi.md#getControllerServiceReferences) | **GET** /controller-services/{id}/references | Gets a controller service                |
-| *ControllerServicesApi*  | [**getPropertyDescriptor**](Docs/ControllerServicesApi.md#getPropertyDescriptor) | **GET** /controller-services/{id}/descriptors | Gets a controller service property descriptor |
-| *ControllerServicesApi*  | [**getState**](Docs/ControllerServicesApi.md#getState) | **GET** /controller-services/{id}/state  | Gets the state for a controller service  |
-| *ControllerServicesApi*  | [**removeControllerService**](Docs/ControllerServicesApi.md#removeControllerService) | **DELETE** /controller-services/{id}     | Deletes a controller service             |
-| *ControllerServicesApi*  | [**updateControllerService**](Docs/ControllerServicesApi.md#updateControllerService) | **PUT** /controller-services/{id}        | Updates a controller service             |
-| *ControllerServicesApi*  | [**updateControllerServiceReferences**](Docs/ControllerServicesApi.md#updateControllerServiceReferences) | **PUT** /controller-services/{id}/references | Updates a controller services references |
-| *CountersApi*            | [**getCounters**](Docs/CountersApi.md#getCounters) | **GET** /counters                        | Gets the current counters for this NiFi  |
-| *CountersApi*            | [**updateCounter**](Docs/CountersApi.md#updateCounter) | **PUT** /counters/{id}                   | Updates the specified counter. This will reset the counter value to 0 |
-| *DataTransferApi*        | [**commitInputPortTransaction**](Docs/DataTransferApi.md#commitInputPortTransaction) | **DELETE** /data-transfer/input-ports/{portId}/transactions/{transactionId} | Commit or cancel the specified transaction |
-| *DataTransferApi*        | [**commitOutputPortTransaction**](Docs/DataTransferApi.md#commitOutputPortTransaction) | **DELETE** /data-transfer/output-ports/{portId}/transactions/{transactionId} | Commit or cancel the specified transaction |
-| *DataTransferApi*        | [**createPortTransaction**](Docs/DataTransferApi.md#createPortTransaction) | **POST** /data-transfer/{portType}/{portId}/transactions | Create a transaction to the specified output port or input port |
-| *DataTransferApi*        | [**extendInputPortTransactionTTL**](Docs/DataTransferApi.md#extendInputPortTransactionTTL) | **PUT** /data-transfer/input-ports/{portId}/transactions/{transactionId} | Extend transaction TTL                   |
-| *DataTransferApi*        | [**extendOutputPortTransactionTTL**](Docs/DataTransferApi.md#extendOutputPortTransactionTTL) | **PUT** /data-transfer/output-ports/{portId}/transactions/{transactionId} | Extend transaction TTL                   |
-| *DataTransferApi*        | [**receiveFlowFiles**](Docs/DataTransferApi.md#receiveFlowFiles) | **POST** /data-transfer/input-ports/{portId}/transactions/{transactionId}/flow-files | Transfer flow files to the input port    |
-| *DataTransferApi*        | [**transferFlowFiles**](Docs/DataTransferApi.md#transferFlowFiles) | **GET** /data-transfer/output-ports/{portId}/transactions/{transactionId}/flow-files | Transfer flow files from the output port |
-| *FlowApi*                | [**generateClientId**](Docs/FlowApi.md#generateClientId) | **GET** /flow/client-id                  | Generates a client id.                   |
-| *FlowApi*                | [**getAboutInfo**](Docs/FlowApi.md#getAboutInfo) | **GET** /flow/about                      | Retrieves details about this NiFi to put in the About dialog |
-| *FlowApi*                | [**getAction**](Docs/FlowApi.md#getAction) | **GET** /flow/history/{id}               | Gets an action                           |
-| *FlowApi*                | [**getBanners**](Docs/FlowApi.md#getBanners) | **GET** /flow/banners                    | Retrieves the banners for this NiFi      |
-| *FlowApi*                | [**getBulletinBoard**](Docs/FlowApi.md#getBulletinBoard) | **GET** /flow/bulletin-board             | Gets current bulletins                   |
-| *FlowApi*                | [**getBulletins**](Docs/FlowApi.md#getBulletins) | **GET** /flow/controller/bulletins       | Retrieves Controller level bulletins     |
-| *FlowApi*                | [**getClusterSummary**](Docs/FlowApi.md#getClusterSummary) | **GET** /flow/cluster/summary            | The cluster summary for this NiFi        |
-| *FlowApi*                | [**getComponentHistory**](Docs/FlowApi.md#getComponentHistory) | **GET** /flow/history/components/{componentId} | Gets configuration history for a component |
-| *FlowApi*                | [**getConnectionStatus**](Docs/FlowApi.md#getConnectionStatus) | **GET** /flow/connections/{id}/status    | Gets status for a connection             |
-| *FlowApi*                | [**getConnectionStatusHistory**](Docs/FlowApi.md#getConnectionStatusHistory) | **GET** /flow/connections/{id}/status/history | Gets the status history for a connection |
-| *FlowApi*                | [**getControllerServiceTypes**](Docs/FlowApi.md#getControllerServiceTypes) | **GET** /flow/controller-service-types   | Retrieves the types of controller services that this NiFi supports |
-| *FlowApi*                | [**getControllerServicesFromController**](Docs/FlowApi.md#getControllerServicesFromController) | **GET** /flow/controller/controller-services | Gets all controller services             |
-| *FlowApi*                | [**getControllerServicesFromGroup**](Docs/FlowApi.md#getControllerServicesFromGroup) | **GET** /flow/process-groups/{id}/controller-services | Gets all controller services             |
-| *FlowApi*                | [**getControllerStatus**](Docs/FlowApi.md#getControllerStatus) | **GET** /flow/status                     | Gets the current status of this NiFi     |
-| *FlowApi*                | [**getCurrentUser**](Docs/FlowApi.md#getCurrentUser) | **GET** /flow/current-user               | Retrieves the user identity of the user making the request |
-| *FlowApi*                | [**getFlow**](Docs/FlowApi.md#getFlow)   | **GET** /flow/process-groups/{id}        | Gets a process group                     |
-| *FlowApi*                | [**getFlowConfig**](Docs/FlowApi.md#getFlowConfig) | **GET** /flow/config                     | Retrieves the configuration for this NiFi flow |
-| *FlowApi*                | [**getInputPortStatus**](Docs/FlowApi.md#getInputPortStatus) | **GET** /flow/input-ports/{id}/status    | Gets status for an input port            |
-| *FlowApi*                | [**getOutputPortStatus**](Docs/FlowApi.md#getOutputPortStatus) | **GET** /flow/output-ports/{id}/status   | Gets status for an output port           |
-| *FlowApi*                | [**getPrioritizers**](Docs/FlowApi.md#getPrioritizers) | **GET** /flow/prioritizers               | Retrieves the types of prioritizers that this NiFi supports |
-| *FlowApi*                | [**getProcessGroupStatus**](Docs/FlowApi.md#getProcessGroupStatus) | **GET** /flow/process-groups/{id}/status | Gets the status for a process group      |
-| *FlowApi*                | [**getProcessGroupStatusHistory**](Docs/FlowApi.md#getProcessGroupStatusHistory) | **GET** /flow/process-groups/{id}/status/history | Gets status history for a remote process group |
-| *FlowApi*                | [**getProcessorStatus**](Docs/FlowApi.md#getProcessorStatus) | **GET** /flow/processors/{id}/status     | Gets status for a processor              |
-| *FlowApi*                | [**getProcessorStatusHistory**](Docs/FlowApi.md#getProcessorStatusHistory) | **GET** /flow/processors/{id}/status/history | Gets status history for a processor      |
-| *FlowApi*                | [**getProcessorTypes**](Docs/FlowApi.md#getProcessorTypes) | **GET** /flow/processor-types            | Retrieves the types of processors that this NiFi supports |
-| *FlowApi*                | [**getRemoteProcessGroupStatus**](Docs/FlowApi.md#getRemoteProcessGroupStatus) | **GET** /flow/remote-process-groups/{id}/status | Gets status for a remote process group   |
-| *FlowApi*                | [**getRemoteProcessGroupStatusHistory**](Docs/FlowApi.md#getRemoteProcessGroupStatusHistory) | **GET** /flow/remote-process-groups/{id}/status/history | Gets the status history                  |
-| *FlowApi*                | [**getReportingTaskTypes**](Docs/FlowApi.md#getReportingTaskTypes) | **GET** /flow/reporting-task-types       | Retrieves the types of reporting tasks that this NiFi supports |
-| *FlowApi*                | [**getReportingTasks**](Docs/FlowApi.md#getReportingTasks) | **GET** /flow/reporting-tasks            | Gets all reporting tasks                 |
-| *FlowApi*                | [**getTemplates**](Docs/FlowApi.md#getTemplates) | **GET** /flow/templates                  | Gets all templates                       |
-| *FlowApi*                | [**queryHistory**](Docs/FlowApi.md#queryHistory) | **GET** /flow/history                    | Gets configuration history               |
-| *FlowApi*                | [**scheduleComponents**](Docs/FlowApi.md#scheduleComponents) | **PUT** /flow/process-groups/{id}        | Schedule or unschedule comopnents in the specified Process Group. |
-| *FlowApi*                | [**searchCluster**](Docs/FlowApi.md#searchCluster) | **GET** /flow/cluster/search-results     | Searches the cluster for a node with the specified address |
-| *FlowApi*                | [**searchFlow**](Docs/FlowApi.md#searchFlow) | **GET** /flow/search-results             | Performs a search against this NiFi using the specified search term |
-| *FlowfileQueuesApi*      | [**createDropRequest**](Docs/FlowfileQueuesApi.md#createDropRequest) | **POST** /flowfile-queues/{id}/drop-requests | Creates a request to drop the contents of the queue in this connection. |
-| *FlowfileQueuesApi*      | [**createFlowFileListing**](Docs/FlowfileQueuesApi.md#createFlowFileListing) | **POST** /flowfile-queues/{id}/listing-requests | Lists the contents of the queue in this connection. |
-| *FlowfileQueuesApi*      | [**deleteListingRequest**](Docs/FlowfileQueuesApi.md#deleteListingRequest) | **DELETE** /flowfile-queues/{id}/listing-requests/{listing-request-id} | Cancels and/or removes a request to list the contents of this connection. |
-| *FlowfileQueuesApi*      | [**downloadFlowFileContent**](Docs/FlowfileQueuesApi.md#downloadFlowFileContent) | **GET** /flowfile-queues/{id}/flowfiles/{flowfile-uuid}/content | Gets the content for a FlowFile in a Connection. |
-| *FlowfileQueuesApi*      | [**getDropRequest**](Docs/FlowfileQueuesApi.md#getDropRequest) | **GET** /flowfile-queues/{id}/drop-requests/{drop-request-id} | Gets the current status of a drop request for the specified connection. |
-| *FlowfileQueuesApi*      | [**getFlowFile**](Docs/FlowfileQueuesApi.md#getFlowFile) | **GET** /flowfile-queues/{id}/flowfiles/{flowfile-uuid} | Gets a FlowFile from a Connection.       |
-| *FlowfileQueuesApi*      | [**getListingRequest**](Docs/FlowfileQueuesApi.md#getListingRequest) | **GET** /flowfile-queues/{id}/listing-requests/{listing-request-id} | Gets the current status of a listing request for the specified connection. |
-| *FlowfileQueuesApi*      | [**removeDropRequest**](Docs/FlowfileQueuesApi.md#removeDropRequest) | **DELETE** /flowfile-queues/{id}/drop-requests/{drop-request-id} | Cancels and/or removes a request to drop the contents of this connection. |
-| *FunnelApi*              | [**getFunnel**](Docs/FunnelApi.md#getFunnel) | **GET** /funnels/{id}                    | Gets a funnel                            |
-| *FunnelApi*              | [**removeFunnel**](Docs/FunnelApi.md#removeFunnel) | **DELETE** /funnels/{id}                 | Deletes a funnel                         |
-| *FunnelApi*              | [**updateFunnel**](Docs/FunnelApi.md#updateFunnel) | **PUT** /funnels/{id}                    | Updates a funnel                         |
-| *InputPortsApi*          | [**getInputPort**](Docs/InputPortsApi.md#getInputPort) | **GET** /input-ports/{id}                | Gets an input port                       |
-| *InputPortsApi*          | [**removeInputPort**](Docs/InputPortsApi.md#removeInputPort) | **DELETE** /input-ports/{id}             | Deletes an input port                    |
-| *InputPortsApi*          | [**updateInputPort**](Docs/InputPortsApi.md#updateInputPort) | **PUT** /input-ports/{id}                | Updates an input port                    |
-| *LabelsApi*              | [**getLabel**](Docs/LabelsApi.md#getLabel) | **GET** /labels/{id}                     | Gets a label                             |
-| *LabelsApi*              | [**removeLabel**](Docs/LabelsApi.md#removeLabel) | **DELETE** /labels/{id}                  | Deletes a label                          |
-| *LabelsApi*              | [**updateLabel**](Docs/LabelsApi.md#updateLabel) | **PUT** /labels/{id}                     | Updates a label                          |
-| *OutputPortsApi*         | [**getOutputPort**](Docs/OutputPortsApi.md#getOutputPort) | **GET** /output-ports/{id}               | Gets an output port                      |
-| *OutputPortsApi*         | [**removeOutputPort**](Docs/OutputPortsApi.md#removeOutputPort) | **DELETE** /output-ports/{id}            | Deletes an output port                   |
-| *OutputPortsApi*         | [**updateOutputPort**](Docs/OutputPortsApi.md#updateOutputPort) | **PUT** /output-ports/{id}               | Updates an output port                   |
-| *PoliciesApi*            | [**createAccessPolicy**](Docs/PoliciesApi.md#createAccessPolicy) | **POST** /policies                       | Creates an access policy                 |
-| *PoliciesApi*            | [**getAccessPolicy**](Docs/PoliciesApi.md#getAccessPolicy) | **GET** /policies/{id}                   | Gets an access policy                    |
-| *PoliciesApi*            | [**getAccessPolicyForResource**](Docs/PoliciesApi.md#getAccessPolicyForResource) | **GET** /policies/{action}/{resource}    | Gets an access policy for the specified action and resource |
-| *PoliciesApi*            | [**removeAccessPolicy**](Docs/PoliciesApi.md#removeAccessPolicy) | **DELETE** /policies/{id}                | Deletes an access policy                 |
-| *PoliciesApi*            | [**updateAccessPolicy**](Docs/PoliciesApi.md#updateAccessPolicy) | **PUT** /policies/{id}                   | Updates a access policy                  |
-| *ProcessGroupsApi*       | [**copySnippet**](Docs/ProcessGroupsApi.md#copySnippet) | **POST** /process-groups/{id}/snippet-instance | Copies a snippet and discards it.        |
-| *ProcessGroupsApi*       | [**createConnection**](Docs/ProcessGroupsApi.md#createConnection) | **POST** /process-groups/{id}/connections | Creates a connection                     |
-| *ProcessGroupsApi*       | [**createControllerService**](Docs/ProcessGroupsApi.md#createControllerService) | **POST** /process-groups/{id}/controller-services | Creates a new controller service         |
-| *ProcessGroupsApi*       | [**createFunnel**](Docs/ProcessGroupsApi.md#createFunnel) | **POST** /process-groups/{id}/funnels    | Creates a funnel                         |
-| *ProcessGroupsApi*       | [**createInputPort**](Docs/ProcessGroupsApi.md#createInputPort) | **POST** /process-groups/{id}/input-ports | Creates an input port                    |
-| *ProcessGroupsApi*       | [**createLabel**](Docs/ProcessGroupsApi.md#createLabel) | **POST** /process-groups/{id}/labels     | Creates a label                          |
-| *ProcessGroupsApi*       | [**createOutputPort**](Docs/ProcessGroupsApi.md#createOutputPort) | **POST** /process-groups/{id}/output-ports | Creates an output port                   |
-| *ProcessGroupsApi*       | [**createProcessGroup**](Docs/ProcessGroupsApi.md#createProcessGroup) | **POST** /process-groups/{id}/process-groups | Creates a process group                  |
-| *ProcessGroupsApi*       | [**createProcessor**](Docs/ProcessGroupsApi.md#createProcessor) | **POST** /process-groups/{id}/processors | Creates a new processor                  |
-| *ProcessGroupsApi*       | [**createRemoteProcessGroup**](Docs/ProcessGroupsApi.md#createRemoteProcessGroup) | **POST** /process-groups/{id}/remote-process-groups | Creates a new process group              |
-| *ProcessGroupsApi*       | [**createTemplate**](Docs/ProcessGroupsApi.md#createTemplate) | **POST** /process-groups/{id}/templates  | Creates a template and discards the specified snippet. |
-| *ProcessGroupsApi*       | [**getConnections**](Docs/ProcessGroupsApi.md#getConnections) | **GET** /process-groups/{id}/connections | Gets all connections                     |
-| *ProcessGroupsApi*       | [**getFunnels**](Docs/ProcessGroupsApi.md#getFunnels) | **GET** /process-groups/{id}/funnels     | Gets all funnels                         |
-| *ProcessGroupsApi*       | [**getInputPorts**](Docs/ProcessGroupsApi.md#getInputPorts) | **GET** /process-groups/{id}/input-ports | Gets all input ports                     |
-| *ProcessGroupsApi*       | [**getLabels**](Docs/ProcessGroupsApi.md#getLabels) | **GET** /process-groups/{id}/labels      | Gets all labels                          |
-| *ProcessGroupsApi*       | [**getOutputPorts**](Docs/ProcessGroupsApi.md#getOutputPorts) | **GET** /process-groups/{id}/output-ports | Gets all output ports                    |
-| *ProcessGroupsApi*       | [**getProcessGroup**](Docs/ProcessGroupsApi.md#getProcessGroup) | **GET** /process-groups/{id}             | Gets a process group                     |
-| *ProcessGroupsApi*       | [**getProcessGroups**](Docs/ProcessGroupsApi.md#getProcessGroups) | **GET** /process-groups/{id}/process-groups | Gets all process groups                  |
-| *ProcessGroupsApi*       | [**getProcessors**](Docs/ProcessGroupsApi.md#getProcessors) | **GET** /process-groups/{id}/processors  | Gets all processors                      |
-| *ProcessGroupsApi*       | [**getRemoteProcessGroups**](Docs/ProcessGroupsApi.md#getRemoteProcessGroups) | **GET** /process-groups/{id}/remote-process-groups | Gets all remote process groups           |
-| *ProcessGroupsApi*       | [**importTemplate**](Docs/ProcessGroupsApi.md#importTemplate) | **POST** /process-groups/{id}/templates/import | Imports a template                       |
-| *ProcessGroupsApi*       | [**instantiateTemplate**](Docs/ProcessGroupsApi.md#instantiateTemplate) | **POST** /process-groups/{id}/template-instance | Instantiates a template                  |
-| *ProcessGroupsApi*       | [**removeProcessGroup**](Docs/ProcessGroupsApi.md#removeProcessGroup) | **DELETE** /process-groups/{id}          | Deletes a process group                  |
-| *ProcessGroupsApi*       | [**updateProcessGroup**](Docs/ProcessGroupsApi.md#updateProcessGroup) | **PUT** /process-groups/{id}             | Updates a process group                  |
-| *ProcessGroupsApi*       | [**uploadTemplate**](Docs/ProcessGroupsApi.md#uploadTemplate) | **POST** /process-groups/{id}/templates/upload | Uploads a template                       |
-| *ProcessorsApi*          | [**clearState**](Docs/ProcessorsApi.md#clearState) | **POST** /processors/{id}/state/clear-requests | Clears the state for a processor         |
-| *ProcessorsApi*          | [**deleteProcessor**](Docs/ProcessorsApi.md#deleteProcessor) | **DELETE** /processors/{id}              | Deletes a processor                      |
-| *ProcessorsApi*          | [**getProcessor**](Docs/ProcessorsApi.md#getProcessor) | **GET** /processors/{id}                 | Gets a processor                         |
-| *ProcessorsApi*          | [**getPropertyDescriptor**](Docs/ProcessorsApi.md#getPropertyDescriptor) | **GET** /processors/{id}/descriptors     | Gets the descriptor for a processor property |
-| *ProcessorsApi*          | [**getState**](Docs/ProcessorsApi.md#getState) | **GET** /processors/{id}/state           | Gets the state for a processor           |
-| *ProcessorsApi*          | [**updateProcessor**](Docs/ProcessorsApi.md#updateProcessor) | **PUT** /processors/{id}                 | Updates a processor                      |
-| *ProvenanceApi*          | [**deleteLineage**](Docs/ProvenanceApi.md#deleteLineage) | **DELETE** /provenance/lineage/{id}      | Deletes a lineage query                  |
-| *ProvenanceApi*          | [**deleteProvenance**](Docs/ProvenanceApi.md#deleteProvenance) | **DELETE** /provenance/{id}              | Deletes a provenance query               |
-| *ProvenanceApi*          | [**getLineage**](Docs/ProvenanceApi.md#getLineage) | **GET** /provenance/lineage/{id}         | Gets a lineage query                     |
-| *ProvenanceApi*          | [**getProvenance**](Docs/ProvenanceApi.md#getProvenance) | **GET** /provenance/{id}                 | Gets a provenance query                  |
-| *ProvenanceApi*          | [**getSearchOptions**](Docs/ProvenanceApi.md#getSearchOptions) | **GET** /provenance/search-options       | Gets the searchable attributes for provenance events |
-| *ProvenanceApi*          | [**submitLineageRequest**](Docs/ProvenanceApi.md#submitLineageRequest) | **POST** /provenance/lineage             | Submits a lineage query                  |
-| *ProvenanceApi*          | [**submitProvenanceRequest**](Docs/ProvenanceApi.md#submitProvenanceRequest) | **POST** /provenance                     | Submits a provenance query               |
-| *ProvenanceEventsApi*    | [**getInputContent**](Docs/ProvenanceEventsApi.md#getInputContent) | **GET** /provenance-events/{id}/content/input | Gets the input content for a provenance event |
-| *ProvenanceEventsApi*    | [**getOutputContent**](Docs/ProvenanceEventsApi.md#getOutputContent) | **GET** /provenance-events/{id}/content/output | Gets the output content for a provenance event |
-| *ProvenanceEventsApi*    | [**getProvenanceEvent**](Docs/ProvenanceEventsApi.md#getProvenanceEvent) | **GET** /provenance-events/{id}          | Gets a provenance event                  |
-| *ProvenanceEventsApi*    | [**submitReplay**](Docs/ProvenanceEventsApi.md#submitReplay) | **POST** /provenance-events/replays      | Replays content from a provenance event  |
-| *RemoteProcessGroupsApi* | [**getRemoteProcessGroup**](Docs/RemoteProcessGroupsApi.md#getRemoteProcessGroup) | **GET** /remote-process-groups/{id}      | Gets a remote process group              |
-| *RemoteProcessGroupsApi* | [**removeRemoteProcessGroup**](Docs/RemoteProcessGroupsApi.md#removeRemoteProcessGroup) | **DELETE** /remote-process-groups/{id}   | Deletes a remote process group           |
-| *RemoteProcessGroupsApi* | [**updateRemoteProcessGroup**](Docs/RemoteProcessGroupsApi.md#updateRemoteProcessGroup) | **PUT** /remote-process-groups/{id}      | Updates a remote process group           |
-| *RemoteProcessGroupsApi* | [**updateRemoteProcessGroupInputPort**](Docs/RemoteProcessGroupsApi.md#updateRemoteProcessGroupInputPort) | **PUT** /remote-process-groups/{id}/input-ports/{port-id} | Updates a remote port                    |
-| *RemoteProcessGroupsApi* | [**updateRemoteProcessGroupOutputPort**](Docs/RemoteProcessGroupsApi.md#updateRemoteProcessGroupOutputPort) | **PUT** /remote-process-groups/{id}/output-ports/{port-id} | Updates a remote port                    |
-| *ReportingTasksApi*      | [**clearState**](Docs/ReportingTasksApi.md#clearState) | **POST** /reporting-tasks/{id}/state/clear-requests | Clears the state for a reporting task    |
-| *ReportingTasksApi*      | [**getPropertyDescriptor**](Docs/ReportingTasksApi.md#getPropertyDescriptor) | **GET** /reporting-tasks/{id}/descriptors | Gets a reporting task property descriptor |
-| *ReportingTasksApi*      | [**getReportingTask**](Docs/ReportingTasksApi.md#getReportingTask) | **GET** /reporting-tasks/{id}            | Gets a reporting task                    |
-| *ReportingTasksApi*      | [**getState**](Docs/ReportingTasksApi.md#getState) | **GET** /reporting-tasks/{id}/state      | Gets the state for a reporting task      |
-| *ReportingTasksApi*      | [**removeReportingTask**](Docs/ReportingTasksApi.md#removeReportingTask) | **DELETE** /reporting-tasks/{id}         | Deletes a reporting task                 |
-| *ReportingTasksApi*      | [**updateReportingTask**](Docs/ReportingTasksApi.md#updateReportingTask) | **PUT** /reporting-tasks/{id}            | Updates a reporting task                 |
-| *ResourcesApi*           | [**getResources**](Docs/ResourcesApi.md#getResources) | **GET** /resources                       | Gets the available resources that support access/authorization policies |
-| *SiteToSiteApi*          | [**getPeers**](Docs/SiteToSiteApi.md#getPeers) | **GET** /site-to-site/peers              | Returns the available Peers and its status of this NiFi |
-| *SiteToSiteApi*          | [**getSiteToSiteDetails**](Docs/SiteToSiteApi.md#getSiteToSiteDetails) | **GET** /site-to-site                    | Returns the details about this NiFi necessary to communicate via site to site |
-| *SnippetsApi*            | [**createSnippet**](Docs/SnippetsApi.md#createSnippet) | **POST** /snippets                       | Creates a snippet. The snippet will be automatically discarded if not used in a subsequent request after 1 minute. |
-| *SnippetsApi*            | [**deleteSnippet**](Docs/SnippetsApi.md#deleteSnippet) | **DELETE** /snippets/{id}                | Deletes the components in a snippet and discards the snippet |
-| *SnippetsApi*            | [**updateSnippet**](Docs/SnippetsApi.md#updateSnippet) | **PUT** /snippets/{id}                   | Move&#39;s the components in this Snippet into a new Process Group and discards the snippet |
-| *SystemDiagnosticsApi*   | [**getSystemDiagnostics**](Docs/SystemDiagnosticsApi.md#getSystemDiagnostics) | **GET** /system-diagnostics              | Gets the diagnostics for the system NiFi is running on |
-| *TemplatesApi*           | [**exportTemplate**](Docs/TemplatesApi.md#exportTemplate) | **GET** /templates/{id}/download         | Exports a template                       |
-| *TemplatesApi*           | [**removeTemplate**](Docs/TemplatesApi.md#removeTemplate) | **DELETE** /templates/{id}               | Deletes a template                       |
-| *TenantsApi*             | [**createUser**](Docs/TenantsApi.md#createUser) | **POST** /tenants/users                  | Creates a user                           |
-| *TenantsApi*             | [**createUserGroup**](Docs/TenantsApi.md#createUserGroup) | **POST** /tenants/user-groups            | Creates a user group                     |
-| *TenantsApi*             | [**getUser**](Docs/TenantsApi.md#getUser) | **GET** /tenants/users/{id}              | Gets a user                              |
-| *TenantsApi*             | [**getUserGroup**](Docs/TenantsApi.md#getUserGroup) | **GET** /tenants/user-groups/{id}        | Gets a user group                        |
-| *TenantsApi*             | [**getUserGroups**](Docs/TenantsApi.md#getUserGroups) | **GET** /tenants/user-groups             | Gets all user groups                     |
-| *TenantsApi*             | [**getUsers**](Docs/TenantsApi.md#getUsers) | **GET** /tenants/users                   | Gets all users                           |
-| *TenantsApi*             | [**removeUser**](Docs/TenantsApi.md#removeUser) | **DELETE** /tenants/users/{id}           | Deletes a user                           |
-| *TenantsApi*             | [**removeUserGroup**](Docs/TenantsApi.md#removeUserGroup) | **DELETE** /tenants/user-groups/{id}     | Deletes a user group                     |
-| *TenantsApi*             | [**searchCluster**](Docs/TenantsApi.md#searchCluster) | **GET** /tenants/search-results          | Searches for a tenant with the specified identity |
-| *TenantsApi*             | [**updateUser**](Docs/TenantsApi.md#updateUser) | **PUT** /tenants/users/{id}              | Updates a user                           |
-| *TenantsApi*             | [**updateUserGroup**](Docs/TenantsApi.md#updateUserGroup) | **PUT** /tenants/user-groups/{id}        | Updates a user group                     |
+| *AccessApi*              | [**CreateAccessToken**](Docs/AccessApi.md#createAccessToken) | **POST** /access/token                   | Creates a token for accessing the REST API via username/password |
+| *AccessApi*              | [**CreateAccessTokenFromTicket**](Docs/AccessApi.md#createAccessTokenFromTicket) | **POST** /access/kerberos                | Creates a token for accessing the REST API via Kerberos ticket exchange / SPNEGO negotiation |
+| *AccessApi*              | [**CreateDownloadToken**](Docs/AccessApi.md#createDownloadToken) | **POST** /access/download-token          | Creates a single use access token for downloading FlowFile content. |
+| *AccessApi*              | [**CreateUiExtensionToken**](Docs/AccessApi.md#createUiExtensionToken) | **POST** /access/ui-extension-token      | Creates a single use access token for accessing a NiFi UI extension. |
+| *AccessApi*              | [**GetAccessStatus**](Docs/AccessApi.md#getAccessStatus) | **GET** /access                          | Gets the status the client&#39;s access  |
+| *AccessApi*              | [**GetLoginConfig**](Docs/AccessApi.md#getLoginConfig) | **GET** /access/config                   | Retrieves the access configuration for this NiFi |
+| *ConnectionsApi*         | [**DeleteConnection**](Docs/ConnectionsApi.md#deleteConnection) | **DELETE** /connections/{id}             | Deletes a connection                     |
+| *ConnectionsApi*         | [**GetConnection**](Docs/ConnectionsApi.md#getConnection) | **GET** /connections/{id}                | Gets a connection                        |
+| *ConnectionsApi*         | [**UpdateConnection**](Docs/ConnectionsApi.md#updateConnection) | **PUT** /connections/{id}                | Updates a connection                     |
+| *ControllerApi*          | [**CreateBulletin**](Docs/ControllerApi.md#createBulletin) | **POST** /controller/bulletin            | Creates a new bulletin                   |
+| *ControllerApi*          | [**CreateControllerService**](Docs/ControllerApi.md#createControllerService) | **POST** /controller/controller-services | Creates a new controller service         |
+| *ControllerApi*          | [**CreateReportingTask**](Docs/ControllerApi.md#createReportingTask) | **POST** /controller/reporting-tasks     | Creates a new reporting task             |
+| *ControllerApi*          | [**DeleteHistory**](Docs/ControllerApi.md#deleteHistory) | **DELETE** /controller/history           | Purges history                           |
+| *ControllerApi*          | [**DeleteNode**](Docs/ControllerApi.md#deleteNode) | **DELETE** /controller/cluster/nodes/{id} | Removes a node from the cluster          |
+| *ControllerApi*          | [**GetCluster**](Docs/ControllerApi.md#getCluster) | **GET** /controller/cluster              | Gets the contents of the cluster         |
+| *ControllerApi*          | [**GetControllerConfig**](Docs/ControllerApi.md#getControllerConfig) | **GET** /controller/config               | Retrieves the configuration for this NiFi Controller |
+| *ControllerApi*          | [**GetNode**](Docs/ControllerApi.md#getNode) | **GET** /controller/cluster/nodes/{id}   | Gets a node in the cluster               |
+| *ControllerApi*          | [**UpdateControllerConfig**](Docs/ControllerApi.md#updateControllerConfig) | **PUT** /controller/config               | Retrieves the configuration for this NiFi |
+| *ControllerApi*          | [**UpdateNode**](Docs/ControllerApi.md#updateNode) | **PUT** /controller/cluster/nodes/{id}   | Updates a node in the cluster            |
+| *ControllerServicesApi*  | [**ClearState**](Docs/ControllerServicesApi.md#clearState) | **POST** /controller-services/{id}/state/clear-requests | Clears the state for a controller service |
+| *ControllerServicesApi*  | [**GetControllerService**](Docs/ControllerServicesApi.md#getControllerService) | **GET** /controller-services/{id}        | Gets a controller service                |
+| *ControllerServicesApi*  | [**GetControllerServiceReferences**](Docs/ControllerServicesApi.md#getControllerServiceReferences) | **GET** /controller-services/{id}/references | Gets a controller service                |
+| *ControllerServicesApi*  | [**GetPropertyDescriptor**](Docs/ControllerServicesApi.md#getPropertyDescriptor) | **GET** /controller-services/{id}/descriptors | Gets a controller service property descriptor |
+| *ControllerServicesApi*  | [**GetState**](Docs/ControllerServicesApi.md#getState) | **GET** /controller-services/{id}/state  | Gets the state for a controller service  |
+| *ControllerServicesApi*  | [**RemoveControllerService**](Docs/ControllerServicesApi.md#removeControllerService) | **DELETE** /controller-services/{id}     | Deletes a controller service             |
+| *ControllerServicesApi*  | [**UpdateControllerService**](Docs/ControllerServicesApi.md#updateControllerService) | **PUT** /controller-services/{id}        | Updates a controller service             |
+| *ControllerServicesApi*  | [**UpdateControllerServiceReferences**](Docs/ControllerServicesApi.md#updateControllerServiceReferences) | **PUT** /controller-services/{id}/references | Updates a controller services references |
+| *CountersApi*            | [**GetCounters**](Docs/CountersApi.md#getCounters) | **GET** /counters                        | Gets the current counters for this NiFi  |
+| *CountersApi*            | [**UpdateCounter**](Docs/CountersApi.md#updateCounter) | **PUT** /counters/{id}                   | Updates the specified counter. This will reset the counter value to 0 |
+| *DataTransferApi*        | [**CommitInputPortTransaction**](Docs/DataTransferApi.md#commitInputPortTransaction) | **DELETE** /data-transfer/input-ports/{portId}/transactions/{transactionId} | Commit or cancel the specified transaction |
+| *DataTransferApi*        | [**CommitOutputPortTransaction**](Docs/DataTransferApi.md#commitOutputPortTransaction) | **DELETE** /data-transfer/output-ports/{portId}/transactions/{transactionId} | Commit or cancel the specified transaction |
+| *DataTransferApi*        | [**CreatePortTransaction**](Docs/DataTransferApi.md#createPortTransaction) | **POST** /data-transfer/{portType}/{portId}/transactions | Create a transaction to the specified output port or input port |
+| *DataTransferApi*        | [**ExtendInputPortTransactionTTL**](Docs/DataTransferApi.md#extendInputPortTransactionTTL) | **PUT** /data-transfer/input-ports/{portId}/transactions/{transactionId} | Extend transaction TTL                   |
+| *DataTransferApi*        | [**ExtendOutputPortTransactionTTL**](Docs/DataTransferApi.md#extendOutputPortTransactionTTL) | **PUT** /data-transfer/output-ports/{portId}/transactions/{transactionId} | Extend transaction TTL                   |
+| *DataTransferApi*        | [**ReceiveFlowFiles**](Docs/DataTransferApi.md#receiveFlowFiles) | **POST** /data-transfer/input-ports/{portId}/transactions/{transactionId}/flow-files | Transfer flow files to the input port    |
+| *DataTransferApi*        | [**TransferFlowFiles**](Docs/DataTransferApi.md#transferFlowFiles) | **GET** /data-transfer/output-ports/{portId}/transactions/{transactionId}/flow-files | Transfer flow files from the output port |
+| *FlowApi*                | [**GenerateClientId**](Docs/FlowApi.md#generateClientId) | **GET** /flow/client-id                  | Generates a client id.                   |
+| *FlowApi*                | [**GetAboutInfo**](Docs/FlowApi.md#getAboutInfo) | **GET** /flow/about                      | Retrieves details about this NiFi to put in the About dialog |
+| *FlowApi*                | [**GetAction**](Docs/FlowApi.md#getAction) | **GET** /flow/history/{id}               | Gets an action                           |
+| *FlowApi*                | [**GetBanners**](Docs/FlowApi.md#getBanners) | **GET** /flow/banners                    | Retrieves the banners for this NiFi      |
+| *FlowApi*                | [**GetBulletinBoard**](Docs/FlowApi.md#getBulletinBoard) | **GET** /flow/bulletin-board             | Gets current bulletins                   |
+| *FlowApi*                | [**GetBulletins**](Docs/FlowApi.md#getBulletins) | **GET** /flow/controller/bulletins       | Retrieves Controller level bulletins     |
+| *FlowApi*                | [**GetClusterSummary**](Docs/FlowApi.md#getClusterSummary) | **GET** /flow/cluster/summary            | The cluster summary for this NiFi        |
+| *FlowApi*                | [**GetComponentHistory**](Docs/FlowApi.md#getComponentHistory) | **GET** /flow/history/components/{componentId} | Gets configuration history for a component |
+| *FlowApi*                | [**GetConnectionStatus**](Docs/FlowApi.md#getConnectionStatus) | **GET** /flow/connections/{id}/status    | Gets status for a connection             |
+| *FlowApi*                | [**GetConnectionStatusHistory**](Docs/FlowApi.md#getConnectionStatusHistory) | **GET** /flow/connections/{id}/status/history | Gets the status history for a connection |
+| *FlowApi*                | [**GetControllerServiceTypes**](Docs/FlowApi.md#getControllerServiceTypes) | **GET** /flow/controller-service-types   | Retrieves the types of controller services that this NiFi supports |
+| *FlowApi*                | [**GetControllerServicesFromController**](Docs/FlowApi.md#getControllerServicesFromController) | **GET** /flow/controller/controller-services | Gets all controller services             |
+| *FlowApi*                | [**GetControllerServicesFromGroup**](Docs/FlowApi.md#getControllerServicesFromGroup) | **GET** /flow/process-groups/{id}/controller-services | Gets all controller services             |
+| *FlowApi*                | [**GetControllerStatus**](Docs/FlowApi.md#getControllerStatus) | **GET** /flow/status                     | Gets the current status of this NiFi     |
+| *FlowApi*                | [**GetCurrentUser**](Docs/FlowApi.md#getCurrentUser) | **GET** /flow/current-user               | Retrieves the user identity of the user making the request |
+| *FlowApi*                | [**GetFlow**](Docs/FlowApi.md#getFlow)   | **GET** /flow/process-groups/{id}        | Gets a process group                     |
+| *FlowApi*                | [**GetFlowConfig**](Docs/FlowApi.md#getFlowConfig) | **GET** /flow/config                     | Retrieves the configuration for this NiFi flow |
+| *FlowApi*                | [**GetInputPortStatus**](Docs/FlowApi.md#getInputPortStatus) | **GET** /flow/input-ports/{id}/status    | Gets status for an input port            |
+| *FlowApi*                | [**GetOutputPortStatus**](Docs/FlowApi.md#getOutputPortStatus) | **GET** /flow/output-ports/{id}/status   | Gets status for an output port           |
+| *FlowApi*                | [**GetPrioritizers**](Docs/FlowApi.md#getPrioritizers) | **GET** /flow/prioritizers               | Retrieves the types of prioritizers that this NiFi supports |
+| *FlowApi*                | [**GetProcessGroupStatus**](Docs/FlowApi.md#getProcessGroupStatus) | **GET** /flow/process-groups/{id}/status | Gets the status for a process group      |
+| *FlowApi*                | [**GetProcessGroupStatusHistory**](Docs/FlowApi.md#getProcessGroupStatusHistory) | **GET** /flow/process-groups/{id}/status/history | Gets status history for a remote process group |
+| *FlowApi*                | [**GetProcessorStatus**](Docs/FlowApi.md#getProcessorStatus) | **GET** /flow/processors/{id}/status     | Gets status for a processor              |
+| *FlowApi*                | [**GetProcessorStatusHistory**](Docs/FlowApi.md#getProcessorStatusHistory) | **GET** /flow/processors/{id}/status/history | Gets status history for a processor      |
+| *FlowApi*                | [**GetProcessorTypes**](Docs/FlowApi.md#getProcessorTypes) | **GET** /flow/processor-types            | Retrieves the types of processors that this NiFi supports |
+| *FlowApi*                | [**GetRemoteProcessGroupStatus**](Docs/FlowApi.md#getRemoteProcessGroupStatus) | **GET** /flow/remote-process-groups/{id}/status | Gets status for a remote process group   |
+| *FlowApi*                | [**GetRemoteProcessGroupStatusHistory**](Docs/FlowApi.md#getRemoteProcessGroupStatusHistory) | **GET** /flow/remote-process-groups/{id}/status/history | Gets the status history                  |
+| *FlowApi*                | [**GetReportingTaskTypes**](Docs/FlowApi.md#getReportingTaskTypes) | **GET** /flow/reporting-task-types       | Retrieves the types of reporting tasks that this NiFi supports |
+| *FlowApi*                | [**GetReportingTasks**](Docs/FlowApi.md#getReportingTasks) | **GET** /flow/reporting-tasks            | Gets all reporting tasks                 |
+| *FlowApi*                | [**GetTemplates**](Docs/FlowApi.md#getTemplates) | **GET** /flow/templates                  | Gets all templates                       |
+| *FlowApi*                | [**QueryHistory**](Docs/FlowApi.md#queryHistory) | **GET** /flow/history                    | Gets configuration history               |
+| *FlowApi*                | [**ScheduleComponents**](Docs/FlowApi.md#scheduleComponents) | **PUT** /flow/process-groups/{id}        | Schedule or unschedule comopnents in the specified Process Group. |
+| *FlowApi*                | [**SearchCluster**](Docs/FlowApi.md#searchCluster) | **GET** /flow/cluster/search-results     | Searches the cluster for a node with the specified address |
+| *FlowApi*                | [**SearchFlow**](Docs/FlowApi.md#searchFlow) | **GET** /flow/search-results             | Performs a search against this NiFi using the specified search term |
+| *FlowfileQueuesApi*      | [**CreateDropRequest**](Docs/FlowfileQueuesApi.md#createDropRequest) | **POST** /flowfile-queues/{id}/drop-requests | Creates a request to drop the contents of the queue in this connection. |
+| *FlowfileQueuesApi*      | [**CreateFlowFileListing**](Docs/FlowfileQueuesApi.md#createFlowFileListing) | **POST** /flowfile-queues/{id}/listing-requests | Lists the contents of the queue in this connection. |
+| *FlowfileQueuesApi*      | [**DeleteListingRequest**](Docs/FlowfileQueuesApi.md#deleteListingRequest) | **DELETE** /flowfile-queues/{id}/listing-requests/{listing-request-id} | Cancels and/or removes a request to list the contents of this connection. |
+| *FlowfileQueuesApi*      | [**DownloadFlowFileContent**](Docs/FlowfileQueuesApi.md#downloadFlowFileContent) | **GET** /flowfile-queues/{id}/flowfiles/{flowfile-uuid}/content | Gets the content for a FlowFile in a Connection. |
+| *FlowfileQueuesApi*      | [**GetDropRequest**](Docs/FlowfileQueuesApi.md#getDropRequest) | **GET** /flowfile-queues/{id}/drop-requests/{drop-request-id} | Gets the current status of a drop request for the specified connection. |
+| *FlowfileQueuesApi*      | [**GetFlowFile**](Docs/FlowfileQueuesApi.md#getFlowFile) | **GET** /flowfile-queues/{id}/flowfiles/{flowfile-uuid} | Gets a FlowFile from a Connection.       |
+| *FlowfileQueuesApi*      | [**GetListingRequest**](Docs/FlowfileQueuesApi.md#getListingRequest) | **GET** /flowfile-queues/{id}/listing-requests/{listing-request-id} | Gets the current status of a listing request for the specified connection. |
+| *FlowfileQueuesApi*      | [**RemoveDropRequest**](Docs/FlowfileQueuesApi.md#removeDropRequest) | **DELETE** /flowfile-queues/{id}/drop-requests/{drop-request-id} | Cancels and/or removes a request to drop the contents of this connection. |
+| *FunnelApi*              | [**GetFunnel**](Docs/FunnelApi.md#getFunnel) | **GET** /funnels/{id}                    | Gets a funnel                            |
+| *FunnelApi*              | [**RemoveFunnel**](Docs/FunnelApi.md#removeFunnel) | **DELETE** /funnels/{id}                 | Deletes a funnel                         |
+| *FunnelApi*              | [**UpdateFunnel**](Docs/FunnelApi.md#updateFunnel) | **PUT** /funnels/{id}                    | Updates a funnel                         |
+| *InputPortsApi*          | [**GetInputPort**](Docs/InputPortsApi.md#getInputPort) | **GET** /input-ports/{id}                | Gets an input port                       |
+| *InputPortsApi*          | [**RemoveInputPort**](Docs/InputPortsApi.md#removeInputPort) | **DELETE** /input-ports/{id}             | Deletes an input port                    |
+| *InputPortsApi*          | [**UpdateInputPort**](Docs/InputPortsApi.md#updateInputPort) | **PUT** /input-ports/{id}                | Updates an input port                    |
+| *LabelsApi*              | [**GetLabel**](Docs/LabelsApi.md#getLabel) | **GET** /labels/{id}                     | Gets a label                             |
+| *LabelsApi*              | [**RemoveLabel**](Docs/LabelsApi.md#removeLabel) | **DELETE** /labels/{id}                  | Deletes a label                          |
+| *LabelsApi*              | [**UpdateLabel**](Docs/LabelsApi.md#updateLabel) | **PUT** /labels/{id}                     | Updates a label                          |
+| *OutputPortsApi*         | [**GetOutputPort**](Docs/OutputPortsApi.md#getOutputPort) | **GET** /output-ports/{id}               | Gets an output port                      |
+| *OutputPortsApi*         | [**RemoveOutputPort**](Docs/OutputPortsApi.md#removeOutputPort) | **DELETE** /output-ports/{id}            | Deletes an output port                   |
+| *OutputPortsApi*         | [**UpdateOutputPort**](Docs/OutputPortsApi.md#updateOutputPort) | **PUT** /output-ports/{id}               | Updates an output port                   |
+| *PoliciesApi*            | [**RreateAccessPolicy**](Docs/PoliciesApi.md#createAccessPolicy) | **POST** /policies                       | Creates an access policy                 |
+| *PoliciesApi*            | [**GetAccessPolicy**](Docs/PoliciesApi.md#getAccessPolicy) | **GET** /policies/{id}                   | Gets an access policy                    |
+| *PoliciesApi*            | [**GetAccessPolicyForResource**](Docs/PoliciesApi.md#getAccessPolicyForResource) | **GET** /policies/{action}/{resource}    | Gets an access policy for the specified action and resource |
+| *PoliciesApi*            | [**RemoveAccessPolicy**](Docs/PoliciesApi.md#removeAccessPolicy) | **DELETE** /policies/{id}                | Deletes an access policy                 |
+| *PoliciesApi*            | [**UpdateAccessPolicy**](Docs/PoliciesApi.md#updateAccessPolicy) | **PUT** /policies/{id}                   | Updates a access policy                  |
+| *ProcessGroupsApi*       | [**CopySnippet**](Docs/ProcessGroupsApi.md#copySnippet) | **POST** /process-groups/{id}/snippet-instance | Copies a snippet and discards it.        |
+| *ProcessGroupsApi*       | [**CreateConnection**](Docs/ProcessGroupsApi.md#createConnection) | **POST** /process-groups/{id}/connections | Creates a connection                     |
+| *ProcessGroupsApi*       | [**CreateControllerService**](Docs/ProcessGroupsApi.md#createControllerService) | **POST** /process-groups/{id}/controller-services | Creates a new controller service         |
+| *ProcessGroupsApi*       | [**CreateFunnel**](Docs/ProcessGroupsApi.md#createFunnel) | **POST** /process-groups/{id}/funnels    | Creates a funnel                         |
+| *ProcessGroupsApi*       | [**CreateInputPort**](Docs/ProcessGroupsApi.md#createInputPort) | **POST** /process-groups/{id}/input-ports | Creates an input port                    |
+| *ProcessGroupsApi*       | [**CreateLabel**](Docs/ProcessGroupsApi.md#createLabel) | **POST** /process-groups/{id}/labels     | Creates a label                          |
+| *ProcessGroupsApi*       | [**CreateOutputPort**](Docs/ProcessGroupsApi.md#createOutputPort) | **POST** /process-groups/{id}/output-ports | Creates an output port                   |
+| *ProcessGroupsApi*       | [**CreateProcessGroup**](Docs/ProcessGroupsApi.md#createProcessGroup) | **POST** /process-groups/{id}/process-groups | Creates a process group                  |
+| *ProcessGroupsApi*       | [**CreateProcessor**](Docs/ProcessGroupsApi.md#createProcessor) | **POST** /process-groups/{id}/processors | Creates a new processor                  |
+| *ProcessGroupsApi*       | [**CreateRemoteProcessGroup**](Docs/ProcessGroupsApi.md#createRemoteProcessGroup) | **POST** /process-groups/{id}/remote-process-groups | Creates a new process group              |
+| *ProcessGroupsApi*       | [**CreateTemplate**](Docs/ProcessGroupsApi.md#createTemplate) | **POST** /process-groups/{id}/templates  | Creates a template and discards the specified snippet. |
+| *ProcessGroupsApi*       | [**GetConnections**](Docs/ProcessGroupsApi.md#getConnections) | **GET** /process-groups/{id}/connections | Gets all connections                     |
+| *ProcessGroupsApi*       | [**GetFunnels**](Docs/ProcessGroupsApi.md#getFunnels) | **GET** /process-groups/{id}/funnels     | Gets all funnels                         |
+| *ProcessGroupsApi*       | [**GetInputPorts**](Docs/ProcessGroupsApi.md#getInputPorts) | **GET** /process-groups/{id}/input-ports | Gets all input ports                     |
+| *ProcessGroupsApi*       | [**GetLabels**](Docs/ProcessGroupsApi.md#getLabels) | **GET** /process-groups/{id}/labels      | Gets all labels                          |
+| *ProcessGroupsApi*       | [**GetOutputPorts**](Docs/ProcessGroupsApi.md#getOutputPorts) | **GET** /process-groups/{id}/output-ports | Gets all output ports                    |
+| *ProcessGroupsApi*       | [**GetProcessGroup**](Docs/ProcessGroupsApi.md#getProcessGroup) | **GET** /process-groups/{id}             | Gets a process group                     |
+| *ProcessGroupsApi*       | [**GetProcessGroups**](Docs/ProcessGroupsApi.md#getProcessGroups) | **GET** /process-groups/{id}/process-groups | Gets all process groups                  |
+| *ProcessGroupsApi*       | [**GetProcessors**](Docs/ProcessGroupsApi.md#getProcessors) | **GET** /process-groups/{id}/processors  | Gets all processors                      |
+| *ProcessGroupsApi*       | [**GetRemoteProcessGroups**](Docs/ProcessGroupsApi.md#getRemoteProcessGroups) | **GET** /process-groups/{id}/remote-process-groups | Gets all remote process groups           |
+| *ProcessGroupsApi*       | [**ImportTemplate**](Docs/ProcessGroupsApi.md#importTemplate) | **POST** /process-groups/{id}/templates/import | Imports a template                       |
+| *ProcessGroupsApi*       | [**InstantiateTemplate**](Docs/ProcessGroupsApi.md#instantiateTemplate) | **POST** /process-groups/{id}/template-instance | Instantiates a template                  |
+| *ProcessGroupsApi*       | [**RemoveProcessGroup**](Docs/ProcessGroupsApi.md#removeProcessGroup) | **DELETE** /process-groups/{id}          | Deletes a process group                  |
+| *ProcessGroupsApi*       | [**UpdateProcessGroup**](Docs/ProcessGroupsApi.md#updateProcessGroup) | **PUT** /process-groups/{id}             | Updates a process group                  |
+| *ProcessGroupsApi*       | [**UploadTemplate**](Docs/ProcessGroupsApi.md#uploadTemplate) | **POST** /process-groups/{id}/templates/upload | Uploads a template                       |
+| *ProcessorsApi*          | [**ClearState**](Docs/ProcessorsApi.md#clearState) | **POST** /processors/{id}/state/clear-requests | Clears the state for a processor         |
+| *ProcessorsApi*          | [**DeleteProcessor**](Docs/ProcessorsApi.md#deleteProcessor) | **DELETE** /processors/{id}              | Deletes a processor                      |
+| *ProcessorsApi*          | [**GetProcessor**](Docs/ProcessorsApi.md#getProcessor) | **GET** /processors/{id}                 | Gets a processor                         |
+| *ProcessorsApi*          | [**GetPropertyDescriptor**](Docs/ProcessorsApi.md#getPropertyDescriptor) | **GET** /processors/{id}/descriptors     | Gets the descriptor for a processor property |
+| *ProcessorsApi*          | [**GetState**](Docs/ProcessorsApi.md#getState) | **GET** /processors/{id}/state           | Gets the state for a processor           |
+| *ProcessorsApi*          | [**UpdateProcessor**](Docs/ProcessorsApi.md#updateProcessor) | **PUT** /processors/{id}                 | Updates a processor                      |
+| *ProvenanceApi*          | [**DeleteLineage**](Docs/ProvenanceApi.md#deleteLineage) | **DELETE** /provenance/lineage/{id}      | Deletes a lineage query                  |
+| *ProvenanceApi*          | [**DeleteProvenance**](Docs/ProvenanceApi.md#deleteProvenance) | **DELETE** /provenance/{id}              | Deletes a provenance query               |
+| *ProvenanceApi*          | [**GetLineage**](Docs/ProvenanceApi.md#getLineage) | **GET** /provenance/lineage/{id}         | Gets a lineage query                     |
+| *ProvenanceApi*          | [**GetProvenance**](Docs/ProvenanceApi.md#getProvenance) | **GET** /provenance/{id}                 | Gets a provenance query                  |
+| *ProvenanceApi*          | [**GetSearchOptions**](Docs/ProvenanceApi.md#getSearchOptions) | **GET** /provenance/search-options       | Gets the searchable attributes for provenance events |
+| *ProvenanceApi*          | [**SubmitLineageRequest**](Docs/ProvenanceApi.md#submitLineageRequest) | **POST** /provenance/lineage             | Submits a lineage query                  |
+| *ProvenanceApi*          | [**SubmitProvenanceRequest**](Docs/ProvenanceApi.md#submitProvenanceRequest) | **POST** /provenance                     | Submits a provenance query               |
+| *ProvenanceEventsApi*    | [**GetInputContent**](Docs/ProvenanceEventsApi.md#getInputContent) | **GET** /provenance-events/{id}/content/input | Gets the input content for a provenance event |
+| *ProvenanceEventsApi*    | [**GetOutputContent**](Docs/ProvenanceEventsApi.md#getOutputContent) | **GET** /provenance-events/{id}/content/output | Gets the output content for a provenance event |
+| *ProvenanceEventsApi*    | [**GetProvenanceEvent**](Docs/ProvenanceEventsApi.md#getProvenanceEvent) | **GET** /provenance-events/{id}          | Gets a provenance event                  |
+| *ProvenanceEventsApi*    | [**SubmitReplay**](Docs/ProvenanceEventsApi.md#submitReplay) | **POST** /provenance-events/replays      | Replays content from a provenance event  |
+| *RemoteProcessGroupsApi* | [**GetRemoteProcessGroup**](Docs/RemoteProcessGroupsApi.md#getRemoteProcessGroup) | **GET** /remote-process-groups/{id}      | Gets a remote process group              |
+| *RemoteProcessGroupsApi* | [**RemoveRemoteProcessGroup**](Docs/RemoteProcessGroupsApi.md#removeRemoteProcessGroup) | **DELETE** /remote-process-groups/{id}   | Deletes a remote process group           |
+| *RemoteProcessGroupsApi* | [**UpdateRemoteProcessGroup**](Docs/RemoteProcessGroupsApi.md#updateRemoteProcessGroup) | **PUT** /remote-process-groups/{id}      | Updates a remote process group           |
+| *RemoteProcessGroupsApi* | [**UpdateRemoteProcessGroupInputPort**](Docs/RemoteProcessGroupsApi.md#updateRemoteProcessGroupInputPort) | **PUT** /remote-process-groups/{id}/input-ports/{port-id} | Updates a remote port                    |
+| *RemoteProcessGroupsApi* | [**UpdateRemoteProcessGroupOutputPort**](Docs/RemoteProcessGroupsApi.md#updateRemoteProcessGroupOutputPort) | **PUT** /remote-process-groups/{id}/output-ports/{port-id} | Updates a remote port                    |
+| *ReportingTasksApi*      | [**ClearState**](Docs/ReportingTasksApi.md#clearState) | **POST** /reporting-tasks/{id}/state/clear-requests | Clears the state for a reporting task    |
+| *ReportingTasksApi*      | [**GetPropertyDescriptor**](Docs/ReportingTasksApi.md#getPropertyDescriptor) | **GET** /reporting-tasks/{id}/descriptors | Gets a reporting task property descriptor |
+| *ReportingTasksApi*      | [**GetReportingTask**](Docs/ReportingTasksApi.md#getReportingTask) | **GET** /reporting-tasks/{id}            | Gets a reporting task                    |
+| *ReportingTasksApi*      | [**GetState**](Docs/ReportingTasksApi.md#getState) | **GET** /reporting-tasks/{id}/state      | Gets the state for a reporting task      |
+| *ReportingTasksApi*      | [**RemoveReportingTask**](Docs/ReportingTasksApi.md#removeReportingTask) | **DELETE** /reporting-tasks/{id}         | Deletes a reporting task                 |
+| *ReportingTasksApi*      | [**UpdateReportingTask**](Docs/ReportingTasksApi.md#updateReportingTask) | **PUT** /reporting-tasks/{id}            | Updates a reporting task                 |
+| *ResourcesApi*           | [**GetResources**](Docs/ResourcesApi.md#getResources) | **GET** /resources                       | Gets the available resources that support access/authorization policies |
+| *SiteToSiteApi*          | [**GetPeers**](Docs/SiteToSiteApi.md#getPeers) | **GET** /site-to-site/peers              | Returns the available Peers and its status of this NiFi |
+| *SiteToSiteApi*          | [**GetSiteToSiteDetails**](Docs/SiteToSiteApi.md#getSiteToSiteDetails) | **GET** /site-to-site                    | Returns the details about this NiFi necessary to communicate via site to site |
+| *SnippetsApi*            | [**CreateSnippet**](Docs/SnippetsApi.md#createSnippet) | **POST** /snippets                       | Creates a snippet. The snippet will be automatically discarded if not used in a subsequent request after 1 minute. |
+| *SnippetsApi*            | [**DeleteSnippet**](Docs/SnippetsApi.md#deleteSnippet) | **DELETE** /snippets/{id}                | Deletes the components in a snippet and discards the snippet |
+| *SnippetsApi*            | [**UpdateSnippet**](Docs/SnippetsApi.md#updateSnippet) | **PUT** /snippets/{id}                   | Move&#39;s the components in this Snippet into a new Process Group and discards the snippet |
+| *SystemDiagnosticsApi*   | [**GetSystemDiagnostics**](Docs/SystemDiagnosticsApi.md#getSystemDiagnostics) | **GET** /system-diagnostics              | Gets the diagnostics for the system NiFi is running on |
+| *TemplatesApi*           | [**ExportTemplate**](Docs/TemplatesApi.md#exportTemplate) | **GET** /templates/{id}/download         | Exports a template                       |
+| *TemplatesApi*           | [**RemoveTemplate**](Docs/TemplatesApi.md#removeTemplate) | **DELETE** /templates/{id}               | Deletes a template                       |
+| *TenantsApi*             | [**CreateUser**](Docs/TenantsApi.md#createUser) | **POST** /tenants/users                  | Creates a user                           |
+| *TenantsApi*             | [**CreateUserGroup**](Docs/TenantsApi.md#createUserGroup) | **POST** /tenants/user-groups            | Creates a user group                     |
+| *TenantsApi*             | [**GetUser**](Docs/TenantsApi.md#getUser) | **GET** /tenants/users/{id}              | Gets a user                              |
+| *TenantsApi*             | [**GetUserGroup**](Docs/TenantsApi.md#getUserGroup) | **GET** /tenants/user-groups/{id}        | Gets a user group                        |
+| *TenantsApi*             | [**GetUserGroups**](Docs/TenantsApi.md#getUserGroups) | **GET** /tenants/user-groups             | Gets all user groups                     |
+| *TenantsApi*             | [**GetUsers**](Docs/TenantsApi.md#getUsers) | **GET** /tenants/users                   | Gets all users                           |
+| *TenantsApi*             | [**RemoveUser**](Docs/TenantsApi.md#removeUser) | **DELETE** /tenants/users/{id}           | Deletes a user                           |
+| *TenantsApi*             | [**RemoveUserGroup**](Docs/TenantsApi.md#removeUserGroup) | **DELETE** /tenants/user-groups/{id}     | Deletes a user group                     |
+| *TenantsApi*             | [**SearchCluster**](Docs/TenantsApi.md#searchCluster) | **GET** /tenants/search-results          | Searches for a tenant with the specified identity |
+| *TenantsApi*             | [**UpdateUser**](Docs/TenantsApi.md#updateUser) | **PUT** /tenants/users/{id}              | Updates a user                           |
+| *TenantsApi*             | [**UpdateUserGroup**](Docs/TenantsApi.md#updateUserGroup) | **PUT** /tenants/user-groups/{id}        | Updates a user group                     |
 
 ## Documentation for Models
 
