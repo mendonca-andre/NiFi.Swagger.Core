@@ -14,7 +14,7 @@ The version of product correspond to the nifi api version.
 
 sample 1.9.1 is build with API Nifi 1.9.1
 
-| version         | version NIFI             |
+| version         | version Nifi             |
 | --------------- | -------------------------|
 | version 1.9.1 | Build with api nifi  1.9.1 |
 
