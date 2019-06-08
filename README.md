@@ -34,7 +34,12 @@ namespace Example
     {
         public void main()
         {
-            var apiInstance = new AccessApi();
+	    var config = new Configuration
+	    {
+	    	BasePath = "http://localhost:8080/nifi-api"
+	    };
+	    
+            var apiInstance = new AccessApi(config);
             var username = username_example;  // string |  (optional) 
             var password = password_example;  // string |  (optional) 
 
