@@ -20,45 +20,37 @@ sample 1.9.1 is build with API Nifi 1.9.1
 
 ## Getting Started
 
-System Diagnostics Api Example 
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
 
-```C#
-
-namespace NiFi.Swagger.SystemDiagnosticsApiExample
+namespace Example
 {
-    using System;
-
-    using NiFi.Swagger.Api;
-    using NiFi.Swagger.Client;
-
-    using Console = System.Console;
-
-    class Program
+    public class CreateAccessTokenExample
     {
-        static void Main(string[] args)
+        public void main()
         {
+            var apiInstance = new AccessApi();
+            var username = username_example;  // string |  (optional) 
+            var password = password_example;  // string |  (optional) 
+
             try
             {
-                var config = new Configuration
-                {
-                    BasePath = "http://localhost:8080/nifi-api"
-                };
-
-                var systemApi = new SystemDiagnosticsApi(config);
-
-                var localDiagnostics = systemApi.GetSystemDiagnostics();
-                Console.WriteLine(localDiagnostics.ToJson());
-
-                Console.ReadKey();
+                // Creates a token for accessing the REST API via username/password
+                string result = apiInstance.CreateAccessToken(username, password);
+                Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                Debug.Print("Exception when calling AccessApi.CreateAccessToken: " + e.Message );
             }
         }
     }
 }
-
 ```
 
 ## Documentation for API Endpoints
