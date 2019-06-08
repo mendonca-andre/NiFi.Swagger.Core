@@ -1,5 +1,5 @@
 # NiFi.Swagger.Core
-.NET Core Client for Apache NiFi 1.9.1 using swagger-cogeden
+.NET Core Client for Apache NiFi using swagger-cogeden
 
 
 To install NiFi.Swagger.Core from within Visual Studio, search for NiFi.Swagger.Core in the NuGet Package Manager UI, or run the following command in the Package Manager Console:
